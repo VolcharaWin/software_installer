@@ -1,0 +1,171 @@
+/* Основные настройки */
+QMainWindow {
+    background-color: #f0f2f5;  /* Светлый фон */
+    font-family: 'Arial', sans-serif;
+}
+
+QPushButton {
+    background-color: #e60000;  /* Красный цвет для кнопок */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 12px;
+    padding: 10px 20px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+QPushButton:hover {
+    background-color: #cc0000;  /* При наведении — более темный красный */
+}
+
+QPushButton:pressed {
+    background-color: #b30000;  /* При нажатии — еще темнее */
+}
+
+/* Стиль для неактивной кнопки */
+QPushButton:disabled {
+    background-color: #d3d3d3;  /* Светло-серый цвет */
+    color: #a1a1a1;  /* Серый текст */
+    border: 1px solid #b0b0b0;  /* Тонкая рамка */
+}
+
+QLineEdit {
+    background-color: white;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+QLineEdit:focus {
+    border-color: #e60000;  /* Красная рамка при фокусе */
+}
+
+QCheckBox {
+    font-size: 14px;
+    color: #333;
+    padding: 5px;
+}
+
+QCheckBox:disabled {
+    color: #a1a1a1;  /* Серый текст для неактивного чекбокса */
+}
+
+QCheckBox::indicator {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #e60000;  /* Красная рамка */
+    border-radius: 5px;
+    background-color: #fff;  /* Белый фон */
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+QCheckBox::indicator:checked {
+    background-color: #e60000;  /* Красный фон при включении */
+    border-color: #e60000;  /* Красная рамка при включении */
+}
+
+QCheckBox::indicator:unchecked {
+    background-color: #fff;  /* Белый фон, когда не отмечено */
+    border-color: #e60000;  /* Красная рамка, когда не отмечено */
+}
+
+QCheckBox::indicator:hover {
+    border-color: #cc0000;  /* Темно-красная рамка при наведении */
+}
+
+QCheckBox::indicator:checked:hover {
+    background-color: #cc0000;  /* Темно-красный фон при наведении */
+}
+
+QCheckBox::indicator:unchecked:hover {
+    background-color: #fafafa;  /* Светло-серый фон при наведении */
+}
+
+/* Стиль для неактивного индикатора чекбокса */
+QCheckBox::indicator:disabled {
+    background-color: #d3d3d3;  /* Светло-серый фон */
+    border-color: #b0b0b0;  /* Серо-серая рамка */
+}
+
+QCheckBox::indicator:disabled:checked {
+    background-color: #a9a9a9;  /* Темно-серый фон для отмеченного неактивного чекбокса */
+}
+
+QCheckBox::indicator:disabled:hover {
+    border-color: #b0b0b0;  /* Не изменяем рамку при наведении на неактивный чекбокс */
+}
+
+/* Настройка для текста чекбокса */
+QCheckBox::indicator:checked::after {
+    content: "✓";
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    position: absolute;
+    top: 2px;
+    left: 5px;
+}
+
+QCheckBox::indicator:unchecked::after {
+    content: "";
+}
+
+QListWidget {
+    border: none;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+QListWidgetItem {
+    background-color: #fafafa;
+    border-radius: 8px;
+    margin: 5px 0;
+}
+
+QListWidget::item:hover {
+    background-color: #f1f1f1;  /* Светло-серый цвет при наведении */
+}
+
+QProgressBar {
+    border: 2px solid #e60000;  /* Красная рамка прогресс-бара */
+    border-radius: 10px;
+    background-color: #f0f2f5;
+    text-align: center;
+    height: 20px;
+    margin: 10px 0;
+}
+
+QProgressBar::chunk {
+    background-color: #e60000;  /* Красный цвет прогресс-бара */
+    border-radius: 10px;
+}
+
+QLabel {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin: 10px;
+}
+
+QHBoxLayout, QVBoxLayout {
+    margin: 0;
+    padding: 10px;
+}
+
+/* Стили для загрузочного экрана */
+#loadingOverlay {
+    background-color: rgba(0, 0, 0, 128);  /* Полупрозрачный черный фон */
+}
+
+#loadingLabel {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Вы можете добавить дополнительные стили, если необходимо */
